@@ -1,15 +1,9 @@
-# BDGPLAY
-
-
-<head>
-<meta name="google-site-verification" content="lL20OZ_Dq-TL4roXbIZdYA3Ui1DMSdeqE69qoTS6E7g" />
-<head>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Website</title>
+<title>BDGPLAY - Promotional Landing Page</title>
 
 <style>
 *{
@@ -20,134 +14,187 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#f4f4f4;
-color:#333;
+background:#0b0b0b;
+color:white;
 }
 
 header{
-background:#0f172a;
-color:white;
-padding:20px;
-text-align:center;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#111;
+border-bottom:1px solid gold;
 }
 
-nav{
-background:#1e293b;
-padding:10px;
-text-align:center;
+.logo{
+font-size:28px;
+font-weight:bold;
+color:gold;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin:15px;
-font-weight:bold;
+margin-left:20px;
 }
 
 .hero{
-padding:80px 20px;
+padding:80px 8%;
 text-align:center;
-background:linear-gradient(135deg,#2563eb,#06b6d4);
-color:white;
 }
 
 .hero h1{
-font-size:48px;
-margin-bottom:20px;
+font-size:50px;
+color:gold;
 }
 
 .hero p{
-font-size:20px;
-margin-bottom:30px;
+margin-top:20px;
+font-size:18px;
+color:#ddd;
+}
+
+.buttons{
+margin-top:35px;
 }
 
 .btn{
 display:inline-block;
-padding:15px 30px;
-background:white;
-color:#2563eb;
-text-decoration:none;
+padding:15px 35px;
+margin:10px;
 border-radius:8px;
+text-decoration:none;
 font-weight:bold;
 }
 
-.services{
-padding:60px 20px;
-text-align:center;
+.gold{
+background:gold;
+color:black;
 }
 
-.cards{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
+.dark{
+border:2px solid gold;
+color:gold;
+}
+
+.features{
+padding:60px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 }
 
 .card{
-background:white;
-padding:20px;
-width:300px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+background:#181818;
+padding:30px;
+border-radius:12px;
+border:1px solid #333;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:gold;
+}
+
+.card h3{
+color:gold;
+margin-bottom:15px;
+}
+
+.download{
+text-align:center;
+padding:60px;
 }
 
 footer{
-background:#0f172a;
-color:white;
+padding:25px;
 text-align:center;
-padding:20px;
-margin-top:40px;
+background:#111;
+border-top:1px solid gold;
+color:#999;
 }
 </style>
 
 </head>
-
 <body>
 
 <header>
-<h2>My Business Website</h2>
-</header>
+
+<div class="logo">BDGPLAY</div>
 
 <nav>
 <a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Services</a>
+<a href="#">Features</a>
+<a href="#">FAQ</a>
 <a href="#">Contact</a>
 </nav>
 
+</header>
+
 <section class="hero">
-<h1>Welcome to My Website</h1>
-<p>Professional Website for Business & SEO</p>
-<a href="#" class="btn">Get Started</a>
+
+<h1>Welcome to BDGPLAY</h1>
+
+<p>
+Enjoy a modern gaming platform experience with a fast, responsive interface.
+</p>
+
+<div class="buttons">
+
+<a href="#" class="btn gold">
+Register
+</a>
+
+<a href="#" class="btn dark">
+Login
+</a>
+
+</div>
+
 </section>
 
-<section class="services">
-<h2>Our Services</h2>
-<br>
-
-<div class="cards">
+<section class="features">
 
 <div class="card">
-<h3>Website Design</h3>
-<p>Modern responsive websites for your business.</p>
+<h3>Fast Access</h3>
+<p>Quick and responsive experience across devices.</p>
 </div>
 
 <div class="card">
-<h3>SEO</h3>
-<p>Rank your website higher on Google Search.</p>
+<h3>Secure Platform</h3>
+<p>Designed with user safety and account protection in mind.</p>
 </div>
 
 <div class="card">
-<h3>Digital Marketing</h3>
-<p>Grow your business with online marketing.</p>
+<h3>24×7 Support</h3>
+<p>Support team available whenever assistance is needed.</p>
 </div>
 
+<div class="card">
+<h3>Mobile Friendly</h3>
+<p>Optimized for Android, iPhone and tablets.</p>
 </div>
+
+</section>
+
+<section class="download">
+
+<h2 style="color:gold;margin-bottom:20px;">
+Download the App
+</h2>
+
+<a href="#" class="btn gold">
+Download APK
+</a>
 
 </section>
 
 <footer>
-<p>© 2026 My Website. All Rights Reserved.</p>
+
+© 2026 BDGPLAY Promotional Landing Page
+
 </footer>
 
 </body>
