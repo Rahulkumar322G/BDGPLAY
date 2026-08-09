@@ -4,7 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="BDG Play website guide, registration, login, games, responsible gaming, FAQs and platform information.">
+
+
 <title>BDG Play - Online Gaming Platform</title>
+
+<link rel="canonical" href="https://bdgplay.us/">
+
+<meta property="og:title" content="BDG Play - Online Gaming Platform">
+<meta property="og:description" content="Explore BDG Play platform information, games, account guides and responsible gaming information.">
+<meta property="og:url" content="https://bdgplay.us/">
+<meta property="og:type" content="website">
+
 <style>
 :root{
   --bg:#090909; --card:#151515; --gold:#d8b442; --gold2:#f0cf58;
