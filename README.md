@@ -7,7 +7,7 @@
 
 
 <title>BDG Play - Online Gaming Platform</title>
-
+<link rel="icon" type="image/png" href="/bdgplay-logo.png">
 <link rel="canonical" href="https://bdgplay.us/">
 
 <meta property="og:title" content="BDG Play - Online Gaming Platform">
