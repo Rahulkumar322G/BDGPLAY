@@ -77,39 +77,221 @@ footer a{display:block;margin:8px 0}footer a:hover{color:#fff}
 
 @media(max-width:800px){
 
+  /* Header */
+  .nav{
+    padding:10px 14px;
+  }
+
+  .brand{
+    font-size:19px;
+    gap:8px;
+  }
+
+  .logo{
+    width:38px;
+    height:38px;
+    font-size:11px;
+  }
+
+  nav{
+    display:none;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  /* Mobile menu */
+  .mobile-nav{
+    display:none;
+  }
+
+  /* Hero */
+  .hero{
+    padding:55px 18px 60px;
+  }
+
+  .hero h1{
+    font-size:38px;
+    line-height:1.12;
+  }
+
+  .hero p{
+    font-size:16px;
+    line-height:1.6;
+    margin-bottom:25px;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+    align-items:stretch;
+    max-width:330px;
+    margin:auto;
+  }
+
+  .hero-actions .btn{
+    width:100%;
+    text-align:center;
+  }
+
+  /* Statistics — 2 + 2 + 1 */
   .stats{
     display:grid;
-    grid-template-columns:repeat(2, minmax(0, 1fr));
-    gap:12px;
-    padding:20px 12px;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+    padding:18px 12px;
   }
 
   .stats div{
     width:100%;
-    padding:18px 8px;
-    border-radius:12px;
+    padding:15px 6px;
+    border-radius:10px;
     text-align:center;
   }
 
   .stats strong{
-    font-size:22px;
     display:block;
+    font-size:21px;
     line-height:1.2;
   }
 
   .stats span{
-    font-size:12px;
     display:block;
+    font-size:12px;
     line-height:1.3;
+    margin-top:4px;
   }
 
-  /* 5th card centered */
   .stats div:nth-child(5){
     grid-column:1 / 3;
     width:50%;
     justify-self:center;
   }
+
+  /* Sections */
+  .container{
+    width:100%;
+    padding:45px 16px;
+  }
+
+  .section-title{
+    margin-bottom:28px;
+  }
+
+  .section-title h2{
+    font-size:28px;
+    line-height:1.25;
+  }
+
+  .section-title p{
+    font-size:15px;
+    line-height:1.6;
+  }
+
+  /* Cards */
+  .grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .card{
+    padding:20px;
+  }
+
+  .card h3{
+    font-size:20px;
+  }
+
+  .card p{
+    font-size:15px;
+  }
+
+  /* Overview */
+  .feature{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  .feature h2{
+    font-size:27px;
+    line-height:1.3;
+  }
+
+  .feature p{
+    font-size:15px;
+  }
+
+  .panel{
+    padding:25px 20px;
+    border-radius:14px;
+  }
+
+  .panel h2{
+    font-size:27px;
+  }
+
+  /* Game images */
+  .card img{
+    height:200px !important;
+  }
+
+  /* Lists */
+  .list{
+    padding-left:20px;
+  }
+
+  .list li{
+    margin:7px 0;
+    font-size:15px;
+  }
+
+  /* Notice */
+  .notice{
+    padding:16px;
+    font-size:14px;
+  }
+
+  /* FAQ */
+  .faq details{
+    padding:16px 0;
+  }
+
+  .faq summary{
+    font-size:15px;
+  }
+
+  /* Team */
+  .team-box{
+    padding:20px;
+  }
+
+  /* CTA */
+  .cta{
+    padding:50px 18px;
+  }
+
+  .cta h2{
+    font-size:28px;
+    line-height:1.3;
+  }
+
+  .cta p{
+    font-size:15px;
+  }
+
+  /* Footer */
+  footer{
+    padding:40px 18px 20px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
 }
+
+  /* 5th card 
 </style>
 </head>
 <body>
