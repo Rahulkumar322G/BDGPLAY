@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="BDG Play login guide covering account access, verification and basic account security reminders.">
+<title>BDG Play Login – Account Access Guide</title>
+<link rel="icon" type="image/png" href="/bdgplay-logo.png">
+<link rel="canonical" href="https://bdgplay.us/bdgplay-login.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="BDG Play">
+<meta property="og:title" content="BDG Play Login – Account Access Guide">
+<meta property="og:description" content="BDG Play login guide covering account access, verification and basic account security reminders.">
+<meta property="og:url" content="https://bdgplay.us/bdgplay-login.html">
+<meta property="og:type" content="website">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+  --ink:#160f2b;
+  --ink-soft:#2a2049;
+  --panel:#1e1640;
+  --coral:#ff5d73;
+  --coral-soft:#ffd9de;
+  --lime:#c8ff4d;
+  --cream:#f6f2ff;
+  --gray:#a89bd1;
+  --line:rgba(246,242,255,.12);
+  --shadow:0 20px 45px rgba(8,4,25,.35);
+  --radius:20px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ink);
+  color:var(--cream);
+  font-family:"Inter",Arial,sans-serif;
+  line-height:1.65;
+  overflow-x:hidden;
+}
+a{color:inherit}
+h1,h2,h3{
+  font-family:"Space Grotesk",Arial,sans-serif;
+  line-height:1.08;
+  font-weight:700;
+  letter-spacing:-.01em;
+}
+
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(22,15,43,.90);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  width:min(1180px,92%);
+  min-height:76px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:0;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--cream);
+  text-decoration:none;
+}
+.brand-logo{
+  width:40px;
+  height:40px;
+  object-fit:contain;
+  border-radius:10px;
+}
+.brand span{
+  font:700 22px "Space Grotesk";
+  letter-spacing:-.01em;
+}
+nav{
+  display:flex;
+  gap:4px;
+  align-items:center;
+}
+nav a{
+  text-decoration:none;
+  color:var(--gray);
+  font-size:14px;
+  font-weight:600;
+  padding:9px 14px;
+  border-radius:8px;
+  transition:.15s ease;
+}
+nav a:hover{
+  color:var(--cream);
+  background:var(--ink-soft);
+}
+.menu-btn{
+  display:none;
+  border:0;
+  background:var(--ink-soft);
+  color:var(--cream);
+  width:42px;
+  height:40px;
+  border-radius:8px;
+  font-size:18px;
+}
+
+/* MOBILE NAV */
+.mobile-nav{
+  display:none;
+  background:var(--ink-soft);
+  color:var(--cream);
+  padding:10px 20px;
+}
+.mobile-nav a{
+  display:block;
+  padding:13px 0;
+  border-bottom:1px solid var(--line);
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:80px 20px 70px;
+  text-align:center;
+  background:
+    radial-gradient(circle at 75% 0%,rgba(255,93,115,.25),transparent 34%),
+    radial-gradient(circle at 20% 30%,rgba(200,255,77,.08),transparent 30%),
+    var(--ink);
+}
+.hero h1{
+  max-width:900px;
+  margin:0 auto;
+  font-size:clamp(42px,6vw,70px);
+}
+.hero h1 span,.gold{color:var(--coral)}
+.hero p{
+  max-width:720px;
+  margin:20px auto 0;
+  color:var(--gray);
+  font-size:16px;
+}
+.hero-actions{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+/* BUTTONS */
+.btn{
+  min-height:50px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:11px 24px;
+  border-radius:12px;
+  border:0;
+  background:var(--coral);
+  color:var(--ink);
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+  box-shadow:0 10px 24px rgba(255,93,115,.25);
+  transition:.2s ease;
+}
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 30px rgba(255,93,115,.35);
+}
+.btn.alt{
+  background:transparent;
+  color:var(--cream);
+  border:1px solid var(--line);
+  box-shadow:none;
+}
+.btn.alt:hover{background:var(--ink-soft)}
+
+/* STATS */
+.stats{
+  width:min(1100px,92%);
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
+  padding:20px 0;
+  background:transparent;
+  border:0;
+}
+.stats div{
+  min-width:0;
+  padding:18px 12px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--panel);
+  text-align:center;
+  transition:.2s ease;
+}
+.stats div:hover{
+  transform:translateY(-3px);
+  border-color:rgba(255,93,115,.45);
+}
+.stats strong{
+  display:block;
+  font:700 26px "Space Grotesk";
+  color:var(--lime);
+  line-height:1.1;
+}
+.stats span{
+  display:block;
+  margin-top:6px;
+  color:var(--gray);
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+}
+
+/* SECTIONS */
+.container{
+  width:min(1100px,92%);
+  margin:auto;
+  padding:70px 0;
+}
+.section-title{
+  max-width:650px;
+  margin:0 auto 32px;
+  text-align:center;
+}
+.section-title h2{
+  font-size:38px;
+}
+.section-title p{
+  margin-top:10px;
+  color:var(--gray);
+  font-size:15px;
+}
+
+/* GRIDS / CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.card{
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:22px;
+  background:var(--panel);
+  box-shadow:none;
+  transition:.2s ease;
+}
+.card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(255,93,115,.45);
+  box-shadow:var(--shadow);
+}
+.card.dark{
+  background:var(--ink-soft);
+  border-color:var(--line);
+}
+.card h3{
+  font-size:22px;
+  margin-bottom:10px;
+  color:var(--cream);
+}
+.card p{
+  color:var(--gray);
+  font-size:14px;
+}
+.card strong{color:var(--cream)}
+.card img{
+  border-radius:14px;
+  border:1px solid var(--line);
+}
+
+/* FEATURE / PANELS */
+.feature{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  align-items:start;
+}
+.feature h2{
+  font-size:38px;
+  margin-bottom:14px;
+}
+.feature>div>p{color:var(--gray);font-size:14px}
+.panel{
+  padding:32px;
+  border-radius:var(--radius);
+  background:linear-gradient(155deg,var(--panel),var(--ink-soft));
+  color:var(--cream);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+.panel h2{
+  font-size:28px;
+  margin-bottom:14px;
+}
+.panel p{color:var(--gray)}
+.panel strong{color:var(--lime)}
+
+/* LISTS / NOTICE */
+.list{padding-left:20px}
+.list li{margin:8px 0;color:var(--gray)}
+.list li::marker{color:var(--lime)}
+.notice{
+  background:rgba(200,255,77,.06);
+  border:1px solid rgba(200,255,77,.18);
+  border-left:4px solid var(--lime);
+  color:var(--cream);
+  padding:18px;
+  border-radius:12px;
+}
+.notice strong,.notice b{color:var(--lime)}
+
+/* FAQ */
+.faq details{
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--panel);
+  padding:18px 20px;
+  margin-bottom:12px;
+}
+.faq summary{
+  font-weight:600;
+  cursor:pointer;
+  color:var(--cream);
+}
+.faq summary:hover{color:var(--lime)}
+.faq details p{margin-top:10px;color:var(--gray);font-size:13px}
+
+/* TEAM / TAGS */
+.team{border-top:1px solid var(--line)}
+.team-box{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:28px;
+}
+.tag{
+  display:inline-block;
+  background:var(--ink-soft);
+  color:var(--lime);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:5px 10px;
+  margin:5px;
+  font-size:12px;
+}
+
+/* CTA */
+.cta{
+  width:min(1100px,92%);
+  margin:0 auto 70px;
+  padding:48px 24px;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:linear-gradient(155deg,var(--panel),var(--ink-soft));
+  box-shadow:var(--shadow);
+  text-align:center;
+}
+.cta h2{font-size:38px}
+.cta p{
+  max-width:620px;
+  margin:10px auto 24px;
+  color:var(--gray);
+  font-size:14px;
+}
+
+/* FOOTER */
+footer{
+  border-top:1px solid var(--line);
+  background:var(--ink);
+  color:var(--gray);
+  padding:40px 0 26px;
+}
+.footer-grid{
+  width:min(1100px,92%);
+  margin:auto;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:35px;
+}
+footer h3{
+  font-size:20px;
+  color:var(--cream);
+  margin-bottom:14px;
+}
+footer a{
+  display:block;
+  margin:8px 0;
+  color:var(--gray);
+  transition:.2s;
+}
+footer a:hover{color:var(--cream)}
+.copy{
+  width:min(1100px,92%);
+  margin:28px auto 0;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  text-align:center;
+  font-size:12px;
+}
+.disclaimer{
+  font-size:12px;
+  color:#766c91;
+  max-width:850px;
+  margin:12px auto;
+  text-align:center;
+}
+
+/* MOBILE */
+@media(max-width:860px){
+  .nav{min-height:68px}
+  nav{display:none}
+  .menu-btn{display:block}
+  .mobile-nav{display:none}
+
+  .hero{padding:65px 18px 55px}
+  .hero h1{font-size:45px}
+  .hero p{font-size:15px}
+  .hero-actions{
+    flex-direction:column;
+    align-items:stretch;
+    max-width:330px;
+    margin:28px auto 0;
+  }
+  .hero-actions .btn{width:100%}
+
+  .stats{
+    grid-template-columns:repeat(2,1fr);
+    width:92%;
+    gap:9px;
+  }
+  .stats div{padding:14px 5px}
+  .stats strong{font-size:25px}
+  .stats span{font-size:9px}
+  .stats div:nth-child(5){
+    grid-column:1 / 3;
+    width:50%;
+    justify-self:center;
+  }
+
+  .container{width:92%;padding:55px 0}
+  .section-title h2{font-size:32px}
+  .grid{grid-template-columns:1fr}
+  .feature{grid-template-columns:1fr}
+  .card{padding:20px}
+  .panel{padding:25px 20px}
+  .panel h2{font-size:28px}
+  .card img{height:200px!important}
+  .cta{width:92%;margin-bottom:50px}
+  .cta h2{font-size:33px}
+  .footer-grid{grid-template-columns:1fr;gap:25px}
+}
+
+@media(max-width:520px){
+  .brand span{font-size:20px}
+  .brand-logo{width:36px;height:36px}
+  .hero h1{font-size:40px}
+  .hero p{font-size:14px}
+  .section-title h2{font-size:30px}
+  .stats strong{font-size:23px}
+  .card{padding:18px}
+  .panel{padding:22px 17px}
+}
+
+body{min-height:100vh}
+.page-wrap{width:min(1100px,92%);margin:auto;padding:24px 0 60px}
+.back{margin:0 0 18px}
+.back a{text-decoration:none;color:var(--gray)}
+.back a:hover{color:var(--cream)}
+.page-wrap .section-title{margin-top:0}
+</style>
+</head>
+<body>
+<header>
+<div class="nav">
+<a class="brand" href="/"><img src="/bdgplay-logo.png" alt="BDG Play Logo" class="brand-logo"><span>BDG Play</span></a>
+<nav>
+<a href="/">Home</a><a href="/bdgplay-register.html">Register</a><a href="/bdgplay-login.html">Login</a><a href="/bdgplay-apk.html">APK Download</a>
+</nav>
+<button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
+</div>
+<div class="mobile-nav" id="mobileNav">
+<a href="/">Home</a><a href="/bdgplay-register.html">BDG Play Register</a><a href="/bdgplay-login.html">BDG Play Login</a><a href="/bdgplay-apk.html">BDG Play APK Download</a>
+</div>
+</header>
+<main><div class="page-wrap"><div class="back"><a href="/">← Back to BDG Play</a></div><section class="container" id="page-content">
+  <div class="section-title">
+    <h2>BDG Play Login – Account Access Guide</h2>
+    <p>General information for users accessing an existing BDG Play account.</p>
+  </div>
+  <div class="card">
+    <p>To access an existing account, use the platform's verified login page and enter the credentials associated with your account. Check that the website address is correct before entering any personal information.</p>
+    <br>
+    <ol class="list">
+      <li>Open the verified BDG Play website.</li>
+      <li>Select the <strong>Login</strong> option.</li>
+      <li>Enter your registered mobile number and password.</li>
+      <li>Complete any verification step requested by the platform.</li>
+      <li>If you cannot access your account, use the platform's official support channel.</li>
+    </ol>
+    <br>
+    <div class="notice"><strong>Security reminder:</strong> Never share your password or OTP with another person, and avoid entering account credentials on unknown or unverified websites.</div>
+  </div>
+</section></div></main>
+<footer>
+<div class="footer-grid">
+<div><h3>BDG Play Game</h3><p>BDG Play platform information and account guides. Play responsibly and only where legally permitted.</p></div>
+<div><h3>QUICK LINKS</h3><a href="/">Home</a><a href="/bdgplay-register.html">BDG Play Register</a><a href="/bdgplay-login.html">BDG Play Login</a><a href="/bdgplay-apk.html">BDG Play APK Download</a></div>
+<div><h3>LEGAL</h3><a href="/#terms">Terms &amp; Conditions</a><a href="/#privacy">Privacy Policy</a><a href="/#responsible">Responsible Gaming</a><a href="/#contact">Contact Us</a><a href="/#faq">FAQ</a></div>
+</div>
+<div class="copy">© 2026 BDG Play. All rights reserved.</div>
+<p class="disclaimer">Strictly for users aged 18 and above. Online gaming laws vary by region in India. Always confirm that participation is permitted in your specific area before playing.</p>
+</footer>
+<script>
+function toggleMenu(){const m=document.getElementById('mobileNav');m.style.display=m.style.display==='block'?'none':'block';}
+document.querySelectorAll('.mobile-nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mobileNav').style.display='none'));
+</script>
+</body></html>
