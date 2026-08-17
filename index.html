@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="BDGPLAY official website guide with login, registration, app information, games and platform details.">
+<meta name="description" content="BDGPLAY official website login with registration, platform information, games and platform details.">
 
 
 <title>BDGPLAY – Official Website, Login & App </title>
@@ -11,914 +11,471 @@
 <link rel="canonical" href="https://bdgplay.us/">
 
 <meta property="og:title" content="BDG Play Game Official">
-<meta property="og:description" content="BDG Play is a popular online gaming platform in India and this is the official website page for login and registration bdgplay.">
+<meta property="og:description" content="BDG Play is the most popular online gaming platform in India and this is official website page for registration and login bdgplay website.">
 <meta property="og:url" content="https://bdgplay.us/">
 <meta property="og:type" content="website">
 
- 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 :root{
-  --bg:#070706;
-  --bg2:#0d0d0b;
-  --card:#121210;
-  --card2:#171612;
-
-  --gold:#b08a28;
-  --gold2:#d4af4a;
-  --gold3:#efd06a;
-
-  --text:#ffffff;
-  --muted:#b7b5ae;
-
-  --line:#302916;
-  --line2:#4b3d1c;
+  --ink:#160f2b;
+  --ink-soft:#2a2049;
+  --panel:#1e1640;
+  --coral:#ff5d73;
+  --coral-soft:#ffd9de;
+  --lime:#c8ff4d;
+  --cream:#f6f2ff;
+  --gray:#a89bd1;
+  --line:rgba(246,242,255,.12);
+  --shadow:0 20px 45px rgba(8,4,25,.35);
+  --radius:20px;
 }
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{
-  font-family:'Poppins',Arial,Helvetica,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.75;
+  background:var(--ink);
+  color:var(--cream);
+  font-family:"Inter",Arial,sans-serif;
+  line-height:1.65;
   overflow-x:hidden;
 }
-
-a{
-  text-decoration:none;
-  color:inherit;
+a{color:inherit}
+h1,h2,h3{
+  font-family:"Space Grotesk",Arial,sans-serif;
+  line-height:1.08;
+  font-weight:700;
+  letter-spacing:-.01em;
 }
 
-/* =========================
-   HEADER
-========================= */
-
+/* HEADER */
 header{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(7,7,6,.97);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--line2);
+  background:rgba(22,15,43,.90);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
 }
-
 .nav{
-  max-width:1180px;
+  width:min(1180px,92%);
+  min-height:76px;
   margin:auto;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:12px 20px;
+  gap:20px;
+  padding:0;
 }
-
 .brand{
   display:flex;
   align-items:center;
   gap:10px;
-  color:var(--gold3);
-  font-family:'Barlow Condensed',sans-serif;
-  font-size:27px;
-  font-weight:700;
-  letter-spacing:.3px;
+  color:var(--cream);
+  text-decoration:none;
 }
-
 .brand-logo{
-  width:42px;
-  height:42px;
+  width:40px;
+  height:40px;
   object-fit:contain;
-  border-radius:9px;
-  display:block;
+  border-radius:10px;
 }
-
-.logo{
-  width:42px;
-  height:42px;
-  border-radius:9px;
-  background:linear-gradient(145deg,#fff0a8,#c99b28);
-  display:grid;
-  place-items:center;
-  color:#111;
-  font-weight:900;
-  font-size:12px;
-  text-align:center;
-  line-height:1.05;
+.brand span{
+  font:700 22px "Space Grotesk";
+  letter-spacing:-.01em;
 }
-
 nav{
   display:flex;
-  gap:24px;
+  gap:4px;
   align-items:center;
-  font-size:14px;
-  color:#ddd;
 }
-
 nav a{
-  transition:.25s ease;
-}
-
-nav a:hover{
-  color:var(--gold3);
-}
-
-/* =========================
-   BUTTONS
-========================= */
-
-.btn{
-  display:inline-block;
-  background:linear-gradient(
-    135deg,
-    var(--gold3),
-    var(--gold)
-  );
-  color:#090909;
-  padding:13px 23px;
-  border:1px solid #e0bd55;
+  text-decoration:none;
+  color:var(--gray);
+  font-size:14px;
+  font-weight:600;
+  padding:9px 14px;
   border-radius:8px;
-  font-weight:700;
-  letter-spacing:.1px;
-  box-shadow:0 8px 22px rgba(176,138,40,.12);
-  transition:
-    transform .2s ease,
-    box-shadow .2s ease,
-    filter .2s ease;
+  transition:.15s ease;
 }
-
-.btn:hover{
-  transform:translateY(-2px);
-  filter:brightness(1.06);
-  box-shadow:0 12px 28px rgba(176,138,40,.22);
+nav a:hover{
+  color:var(--cream);
+  background:var(--ink-soft);
 }
-
-.btn.alt{
-  background:transparent;
-  border:1px solid var(--gold);
-  color:var(--gold3);
-  box-shadow:none;
-}
-
-.btn.alt:hover{
-  background:rgba(176,138,40,.1);
-  box-shadow:0 10px 24px rgba(176,138,40,.12);
-}
-
 .menu-btn{
   display:none;
-  background:#121210;
-  border:1px solid var(--line2);
-  color:var(--gold3);
-  padding:10px 15px;
+  border:0;
+  background:var(--ink-soft);
+  color:var(--cream);
+  width:42px;
+  height:40px;
   border-radius:8px;
-  font-size:16px;
-  cursor:pointer;
+  font-size:18px;
 }
 
-/* =========================
-   MOBILE MENU
-========================= */
-
+/* MOBILE NAV */
 .mobile-nav{
   display:none;
-  background:#0d0d0b;
-  color:#eee;
+  background:var(--ink-soft);
+  color:var(--cream);
   padding:10px 20px;
 }
-
 .mobile-nav a{
   display:block;
   padding:13px 0;
   border-bottom:1px solid var(--line);
 }
 
-.mobile-nav a:hover{
-  color:var(--gold3);
-}
-
-/* =========================
-   HERO
-========================= */
-
+/* HERO */
 .hero{
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(176,138,40,.12),
-      transparent 38%
-    ),
-    linear-gradient(
-      180deg,
-      #090908,
-      #070706
-    );
-
-  color:white;
-  padding:92px 20px 95px;
+  position:relative;
+  overflow:hidden;
+  padding:80px 20px 70px;
   text-align:center;
-  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(circle at 75% 0%,rgba(255,93,115,.25),transparent 34%),
+    radial-gradient(circle at 20% 30%,rgba(200,255,77,.08),transparent 30%),
+    var(--ink);
 }
-
 .hero h1{
-  font-family:'Barlow Condensed',sans-serif;
-  font-size:clamp(44px,6vw,76px);
-  line-height:1.03;
-  letter-spacing:.2px;
   max-width:900px;
-  margin:0 auto 22px;
-  font-weight:800;
+  margin:0 auto;
+  font-size:clamp(42px,6vw,70px);
 }
-
-.hero h1 span,
-.gold{
-  color:var(--gold3);
-}
-
+.hero h1 span,.gold{color:var(--coral)}
 .hero p{
-  max-width:760px;
-  margin:0 auto 32px;
-  color:#c9c7c0;
-  font-size:18px;
-  line-height:1.8;
+  max-width:720px;
+  margin:20px auto 0;
+  color:var(--gray);
+  font-size:16px;
 }
-
 .hero-actions{
   display:flex;
   justify-content:center;
-  gap:14px;
+  gap:12px;
   flex-wrap:wrap;
+  margin-top:28px;
 }
 
-/* =========================
-   STATISTICS
-========================= */
-
-.stats{
-  background:#0d0d0b;
-  color:#fff;
-  display:flex;
+/* BUTTONS */
+.btn{
+  min-height:50px;
+  display:inline-flex;
+  align-items:center;
   justify-content:center;
-  gap:16px;
-  text-align:center;
-  padding:22px 20px;
-  border-bottom:1px solid var(--line);
+  padding:11px 24px;
+  border-radius:12px;
+  border:0;
+  background:var(--coral);
+  color:var(--ink);
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+  box-shadow:0 10px 24px rgba(255,93,115,.25);
+  transition:.2s ease;
 }
-
-.stats div{
-  min-width:150px;
-  padding:15px 20px;
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 30px rgba(255,93,115,.35);
+}
+.btn.alt{
+  background:transparent;
+  color:var(--cream);
   border:1px solid var(--line);
-  border-radius:10px;
-  background:
-    linear-gradient(
-      180deg,
-      #14130f,
-      #0f0f0d
-    );
-
-  transition:
-    border-color .25s ease,
-    transform .25s ease;
+  box-shadow:none;
 }
+.btn.alt:hover{background:var(--ink-soft)}
 
+/* STATS */
+.stats{
+  width:min(1100px,92%);
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
+  padding:20px 0;
+  background:transparent;
+  border:0;
+}
+.stats div{
+  min-width:0;
+  padding:18px 12px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--panel);
+  text-align:center;
+  transition:.2s ease;
+}
 .stats div:hover{
-  border-color:var(--line2);
-  transform:translateY(-2px);
+  transform:translateY(-3px);
+  border-color:rgba(255,93,115,.45);
 }
-
 .stats strong{
   display:block;
-  color:var(--gold3);
-  font-family:'Barlow Condensed',sans-serif;
-  font-size:36px;
-  font-weight:700;
+  font:700 26px "Space Grotesk";
+  color:var(--lime);
   line-height:1.1;
 }
-
 .stats span{
-  color:#aeadA7;
-  font-size:12px;
+  display:block;
+  margin-top:6px;
+  color:var(--gray);
+  font-size:11px;
   text-transform:uppercase;
-  letter-spacing:1px;
+  letter-spacing:.06em;
 }
 
-/* =========================
-   SECTIONS
-========================= */
-
+/* SECTIONS */
 .container{
-  max-width:1120px;
+  width:min(1100px,92%);
   margin:auto;
-  padding:72px 20px;
+  padding:70px 0;
 }
-
 .section-title{
+  max-width:650px;
+  margin:0 auto 32px;
   text-align:center;
-  margin-bottom:40px;
 }
-
-.section-title h2,
-.feature h2,
-.panel h2,
-.cta h2{
-  font-family:'Barlow Condensed',sans-serif;
-  font-weight:700;
-  letter-spacing:.2px;
-}
-
 .section-title h2{
-  font-size:40px;
-  line-height:1.15;
-  margin-bottom:9px;
+  font-size:38px;
 }
-
 .section-title p{
-  color:#99978f;
+  margin-top:10px;
+  color:var(--gray);
   font-size:15px;
 }
 
-/* =========================
-   GRID
-========================= */
-
+/* GRIDS / CARDS */
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:20px;
+  gap:16px;
 }
-
-/* =========================
-   CARDS
-========================= */
-
 .card{
   border:1px solid var(--line);
-  border-radius:14px;
-  padding:25px;
-  background:
-    linear-gradient(
-      180deg,
-      #151512,
-      #10100e
-    );
-
-  box-shadow:0 12px 35px rgba(0,0,0,.2);
-
-  transition:
-    transform .25s ease,
-    border-color .25s ease,
-    box-shadow .25s ease;
+  border-radius:18px;
+  padding:22px;
+  background:var(--panel);
+  box-shadow:none;
+  transition:.2s ease;
 }
-
 .card:hover{
-  transform:translateY(-3px);
-  border-color:#58471f;
-  box-shadow:0 16px 38px rgba(0,0,0,.3);
+  transform:translateY(-4px);
+  border-color:rgba(255,93,115,.45);
+  box-shadow:var(--shadow);
 }
-
 .card.dark{
-  background:var(--card);
-  border-color:var(--line2);
-  color:#fff;
+  background:var(--ink-soft);
+  border-color:var(--line);
 }
-
 .card h3{
-  font-family:'Barlow Condensed',sans-serif;
-  font-size:25px;
-  line-height:1.2;
+  font-size:22px;
   margin-bottom:10px;
-  color:#f4d46b;
+  color:var(--cream);
 }
-
 .card p{
-  color:#b8b6af;
-  font-size:15px;
-  line-height:1.75;
+  color:var(--gray);
+  font-size:14px;
+}
+.card strong{color:var(--cream)}
+.card img{
+  border-radius:14px;
+  border:1px solid var(--line);
 }
 
-.card strong{
-  color:#eee;
-}
-
-.icon{
-  font-size:28px;
-  margin-bottom:8px;
-}
-
-/* =========================
-   FEATURE / OVERVIEW
-========================= */
-
+/* FEATURE / PANELS */
 .feature{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:25px;
-  align-items:center;
+  gap:30px;
+  align-items:start;
 }
-
 .feature h2{
   font-size:38px;
   margin-bottom:14px;
 }
-
-.feature > div > p{
-  color:#b8b6af;
-  font-size:15px;
-}
-
-/* =========================
-   DARK PANEL
-========================= */
-
+.feature>div>p{color:var(--gray);font-size:14px}
 .panel{
-  background:
-    linear-gradient(
-      145deg,
-      #15140f,
-      #0e0e0c
-    );
-
-  color:#fff;
-  border:1px solid var(--line2);
-  border-radius:18px;
-  padding:38px;
-
-  box-shadow:0 18px 40px rgba(0,0,0,.25);
+  padding:32px;
+  border-radius:var(--radius);
+  background:linear-gradient(155deg,var(--panel),var(--ink-soft));
+  color:var(--cream);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
 }
-
-.panel p{
-  color:#bbb9b1;
-}
-
 .panel h2{
-  font-size:36px;
+  font-size:28px;
   margin-bottom:14px;
 }
+.panel p{color:var(--gray)}
+.panel strong{color:var(--lime)}
 
-.panel strong{
-  color:var(--gold3);
-}
-
-/* =========================
-   LISTS
-========================= */
-
-.list{
-  padding-left:20px;
-}
-
-.list li{
-  margin:8px 0;
-  color:#bdbbb3;
-}
-
-.list li::marker{
-  color:var(--gold2);
-}
-
-/* =========================
-   NOTICE
-========================= */
-
+/* LISTS / NOTICE */
+.list{padding-left:20px}
+.list li{margin:8px 0;color:var(--gray)}
+.list li::marker{color:var(--lime)}
 .notice{
-  background:#17140b;
-  border:1px solid #55451e;
-  border-left:4px solid var(--gold2);
-  color:#d2d0c8;
-  padding:20px;
-  border-radius:8px;
+  background:rgba(200,255,77,.06);
+  border:1px solid rgba(200,255,77,.18);
+  border-left:4px solid var(--lime);
+  color:var(--cream);
+  padding:18px;
+  border-radius:12px;
 }
+.notice strong,.notice b{color:var(--lime)}
 
-.notice strong,
-.notice b{
-  color:var(--gold3);
-}
-
-/* =========================
-   FAQ
-========================= */
-
+/* FAQ */
 .faq details{
-  border-bottom:1px solid var(--line);
-  padding:18px 0;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--panel);
+  padding:18px 20px;
+  margin-bottom:12px;
 }
-
 .faq summary{
   font-weight:600;
   cursor:pointer;
-  color:#eee;
+  color:var(--cream);
 }
+.faq summary:hover{color:var(--lime)}
+.faq details p{margin-top:10px;color:var(--gray);font-size:13px}
 
-.faq summary:hover{
-  color:var(--gold3);
-}
-
-/* =========================
-   TEAM
-========================= */
-
-.team{
-  background:#0c0c0a;
-}
-
+/* TEAM / TAGS */
+.team{border-top:1px solid var(--line)}
 .team-box{
-  background:#141410;
+  background:var(--panel);
   border:1px solid var(--line);
-  border-left:4px solid var(--gold);
-  border-radius:12px;
+  border-radius:18px;
   padding:28px;
 }
-
 .tag{
   display:inline-block;
-  background:#2a2412;
-  color:#d7b94f;
-  border:1px solid #493b19;
+  background:var(--ink-soft);
+  color:var(--lime);
+  border:1px solid var(--line);
   border-radius:20px;
-  padding:4px 10px;
+  padding:5px 10px;
   margin:5px;
   font-size:12px;
 }
 
-/* =========================
-   IMAGES
-========================= */
-
-.card img{
-  display:block;
-  width:100%;
-  border:1px solid #302916;
-  transition:transform .25s ease,filter .25s ease;
-}
-
-.card:hover img{
-  filter:brightness(1.05);
-}
-
-/* =========================
-   CTA
-========================= */
-
+/* CTA */
 .cta{
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(176,138,40,.1),
-      transparent 45%
-    ),
-    #080807;
-
-  color:#fff;
+  width:min(1100px,92%);
+  margin:0 auto 70px;
+  padding:48px 24px;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:linear-gradient(155deg,var(--panel),var(--ink-soft));
+  box-shadow:var(--shadow);
   text-align:center;
-  padding:70px 20px;
-
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
 }
-
-.cta h2{
-  font-size:42px;
-}
-
+.cta h2{font-size:38px}
 .cta p{
-  color:#aaa;
-  max-width:650px;
-  margin:10px auto 25px;
+  max-width:620px;
+  margin:10px auto 24px;
+  color:var(--gray);
+  font-size:14px;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
+/* FOOTER */
 footer{
-  background:#070706;
-  color:#aaa;
-  padding:50px 20px 25px;
+  border-top:1px solid var(--line);
+  background:var(--ink);
+  color:var(--gray);
+  padding:40px 0 26px;
 }
-
 .footer-grid{
-  max-width:1120px;
+  width:min(1100px,92%);
   margin:auto;
   display:grid;
   grid-template-columns:2fr 1fr 1fr;
   gap:35px;
 }
-
 footer h3{
-  font-family:'Barlow Condensed',sans-serif;
-  font-size:24px;
-  color:var(--gold3);
+  font-size:20px;
+  color:var(--cream);
   margin-bottom:14px;
 }
-
 footer a{
   display:block;
   margin:8px 0;
+  color:var(--gray);
   transition:.2s;
 }
-
-footer a:hover{
-  color:#fff;
-}
-
+footer a:hover{color:var(--cream)}
 .copy{
-  max-width:1120px;
-  margin:30px auto 0;
-  padding-top:20px;
+  width:min(1100px,92%);
+  margin:28px auto 0;
+  padding-top:18px;
   border-top:1px solid var(--line);
   text-align:center;
-  font-size:13px;
+  font-size:12px;
 }
-
 .disclaimer{
   font-size:12px;
-  color:#777;
+  color:#766c91;
   max-width:850px;
   margin:12px auto;
   text-align:center;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
+@media(max-width:860px){
+  .nav{min-height:68px}
+  nav{display:none}
+  .menu-btn{display:block}
+  .mobile-nav{display:none}
 
-@media(max-width:800px){
-
-  .nav{
-    padding:10px 14px;
-  }
-
-  .brand{
-    font-size:23px;
-    gap:8px;
-  }
-
-  .brand-logo{
-    width:38px;
-    height:38px;
-  }
-
-  .logo{
-    width:38px;
-    height:38px;
-    font-size:11px;
-  }
-
-  nav{
-    display:none;
-  }
-
-  .menu-btn{
-    display:block;
-  }
-
-  .mobile-nav{
-    display:none;
-  }
-
-  /* HERO */
-
-  .hero{
-    padding:60px 18px 65px;
-  }
-
-  .hero h1{
-    font-size:45px;
-    line-height:1.06;
-  }
-
-  .hero p{
-    font-size:15px;
-    line-height:1.7;
-    margin-bottom:25px;
-  }
-
+  .hero{padding:65px 18px 55px}
+  .hero h1{font-size:45px}
+  .hero p{font-size:15px}
   .hero-actions{
     flex-direction:column;
     align-items:stretch;
     max-width:330px;
-    margin:auto;
+    margin:28px auto 0;
   }
-
-  .hero-actions .btn{
-    width:100%;
-    text-align:center;
-  }
-
-  /* STATS */
+  .hero-actions .btn{width:100%}
 
   .stats{
-    display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-columns:repeat(2,1fr);
+    width:92%;
     gap:9px;
-    padding:15px 12px;
   }
-
-  .stats div{
-    min-width:0;
-    width:100%;
-    padding:14px 5px;
-  }
-
-  .stats strong{
-    font-size:27px;
-  }
-
-  .stats span{
-    font-size:10px;
-    letter-spacing:.7px;
-  }
-
+  .stats div{padding:14px 5px}
+  .stats strong{font-size:25px}
+  .stats span{font-size:9px}
   .stats div:nth-child(5){
     grid-column:1 / 3;
     width:50%;
     justify-self:center;
   }
 
-  /* SECTIONS */
-
-  .container{
-    width:100%;
-    padding:50px 16px;
-  }
-
-  .section-title{
-    margin-bottom:30px;
-  }
-
-  .section-title h2{
-    font-size:33px;
-    line-height:1.15;
-  }
-
-  .section-title p{
-    font-size:14px;
-    line-height:1.65;
-  }
-
-  /* CARDS */
-
-  .grid{
-    grid-template-columns:1fr;
-    gap:16px;
-  }
-
-  .card{
-    padding:20px;
-  }
-
-  .card h3{
-    font-size:24px;
-  }
-
-  .card p{
-    font-size:14px;
-  }
-
-  /* FEATURE */
-
-  .feature{
-    grid-template-columns:1fr;
-    gap:22px;
-  }
-
-  .feature h2{
-    font-size:33px;
-    line-height:1.2;
-  }
-
-  .feature > div > p{
-    font-size:14px;
-  }
-
-  .panel{
-    padding:25px 20px;
-    border-radius:14px;
-  }
-
-  .panel h2{
-    font-size:32px;
-  }
-
-  /* GAME IMAGES */
-
-  .card img{
-    height:200px !important;
-  }
-
-  /* LISTS */
-
-  .list{
-    padding-left:20px;
-  }
-
-  .list li{
-    margin:7px 0;
-    font-size:14px;
-  }
-
-  /* NOTICE */
-
-  .notice{
-    padding:16px;
-    font-size:13px;
-  }
-
-  /* FAQ */
-
-  .faq details{
-    padding:16px 0;
-  }
-
-  .faq summary{
-    font-size:14px;
-  }
-
-  /* TEAM */
-
-  .team-box{
-    padding:20px;
-  }
-
-  /* CTA */
-
-  .cta{
-    padding:55px 18px;
-  }
-
-  .cta h2{
-    font-size:34px;
-    line-height:1.15;
-  }
-
-  .cta p{
-    font-size:14px;
-  }
-
-  /* FOOTER */
-
-  footer{
-    padding:40px 18px 20px;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
-    gap:25px;
-  }
+  .container{width:92%;padding:55px 0}
+  .section-title h2{font-size:32px}
+  .grid{grid-template-columns:1fr}
+  .feature{grid-template-columns:1fr}
+  .card{padding:20px}
+  .panel{padding:25px 20px}
+  .panel h2{font-size:28px}
+  .card img{height:200px!important}
+  .cta{width:92%;margin-bottom:50px}
+  .cta h2{font-size:33px}
+  .footer-grid{grid-template-columns:1fr;gap:25px}
 }
 
-/* =========================
-   SMALL PHONES
-========================= */
-
-@media(max-width:420px){
-
-  .brand{
-    font-size:21px;
-  }
-
-  .menu-btn{
-    padding:9px 12px;
-    font-size:14px;
-  }
-
-  .hero h1{
-    font-size:40px;
-  }
-
-  .hero p{
-    font-size:14px;
-  }
-
-  .section-title h2{
-    font-size:30px;
-  }
-
-  .stats strong{
-    font-size:24px;
-  }
-
-  .stats span{
-    font-size:9px;
-  }
-
-  .card{
-    padding:18px;
-  }
-
-  .panel{
-    padding:22px 17px;
-  }
+@media(max-width:520px){
+  .brand span{font-size:20px}
+  .brand-logo{width:36px;height:36px}
+  .hero h1{font-size:40px}
+  .hero p{font-size:14px}
+  .section-title h2{font-size:30px}
+  .stats strong{font-size:23px}
+  .card{padding:18px}
+  .panel{padding:22px 17px}
 }
-  
 </style>
 </head>
 <body>
@@ -930,8 +487,7 @@ footer a:hover{
   <span>BDG Play</span>
     </a>
     <nav>
-      <a href="#home">Home</a><a href="#games">Games</a><a href="#bonuses">Bonuses</a>
-      <a href="#blogs">Blogs</a><a href="#faq">FAQ</a><a href="#login">Login</a>
+      <a href="#home">Home</a><a href="#games">Games</a><a href="#bonuses">Bonuses</a><a href="#faq">FAQ</a><a href="#login">Login</a>
       <a class="btn" href="#register">Register Now</a>
     </nav>
     <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
@@ -941,7 +497,6 @@ footer a:hover{
     <a href="#guide">BDG Play App Guide</a>
     <a href="#register">BDG Play Register</a>
     <a href="#login">BDG Play Login</a>
-    <a href="#blogs">Blogs</a>
     <a href="#about">About Us</a>
   </div>
 </header>
@@ -950,12 +505,11 @@ footer a:hover{
 <section class="hero">
   <h1>Ready to Start Playing on <span>BDG Play?</span> 🎯</h1>
   <p>
-  BDG Play is a popular online gaming app in India with games like Colour
-  Prediction, K3, 5D, Aviator, and TRX Hash Win. It supports UPI, PhonePe,
-  and Paytm for fast deposits and withdrawals on Android devices.
+  BDG Play is an online gaming platform where users can enjoy colour prediction
+  games, number-based games, referral rewards, and various exciting ...
 </p>
   <div class="hero-actions">
-    <a class="btn" href="#register">Create Free Account →</a>
+    <a class="btn" href="#register">Register →</a>
     <a class="btn alt" href="#login">BDG Play Login</a>
   </div>
 </section>
@@ -987,254 +541,31 @@ footer a:hover{
   </div>
 </section>
 
-<section class="container" id="overview">
+
+<section class="container" id="quick-facts">
   <div class="section-title">
-    <h2>Overview of <span class="gold">BDG Play Game</span></h2>
-    <p>Information about the platform and its gaming experience.</p>
+    <h2>BDG Play Game – Quick Platform Facts</h2>
+    <p>Key platform information at a glance.</p>
   </div>
-
-  <div class="feature">
-    <div>
-      <h2>Overview of BDG Play Game</h2>
-
-      <p>
-        Our platform is built to deliver a smooth and enjoyable online gaming
-        experience for all users. All popular games are available inside one
-        single application, so there is no need to download multiple apps or
-        switch between different platforms. The interface is clean,
-        well-organized, and easy to understand — even if you are using it for
-        the very first time.
-      </p>
-
-      <br>
-
-      <p>
-        Whether you enjoy colour prediction, lottery-style numbers, a crash
-        game like Aviator, or just want to try some casual mini games,
-        BDG Play Game has something for different types of players. The
-        platform is particularly popular among users who like short,
-        fast-paced games with quick results.
-      </p>
-
-      <br>
-
-      <p>
-        After you complete the registration process, you get direct access to
-        your game wallet, bonus section, deposit options, and all your account
-        details — all from one main dashboard. The layout is clean so you can
-        find what you need without any confusion or unnecessary tapping around.
-      </p>
-
-      <br>
-
-      <p>
-        BDG Play Game also promotes responsible gaming and has a dedicated
-        support team available throughout the day. Any questions about your
-        account, payments, or gameplay can be resolved quickly through the
-        support channel.
-      </p>
-    </div>
-
-    <div class="panel">
-      <h2>BDG Play Game – Quick Platform Facts</h2>
-
-      <p><strong>Platform Type:</strong><br>
-      Colour Prediction &amp; Lottery Gaming App</p>
-
-      <br>
-
-      <p><strong>Available In:</strong><br>
-      India</p>
-
-      <br>
-
-      <p><strong>Minimum Deposit:</strong><br>
-      ₹100 (varies by payment channel)</p>
-
-      <br>
-
-      <p><strong>Minimum Withdrawal:</strong><br>
-      ₹110</p>
-
-      <br>
-
-      <p><strong>Supported Payments:</strong><br>
-      UPI, PhonePe, Paytm, GPay, Bank Transfer, TRC20</p>
-
-      <br>
-
-      <p><strong>Age Requirement:</strong><br>
-      18+ only</p>
-
-      <br>
-
-      <p><strong>App Platform:</strong><br>
-      Android APK Download</p>
-
-      <br>
-
-      <p><strong>Customer Support:</strong><br>
-      24/7 Available</p>
-    </div>
+  <div class="panel">
+    <p><strong>Platform Type:</strong><br>Colour Prediction &amp; Lottery Gaming App</p>
+    <br>
+    <p><strong>Available In:</strong><br>India</p>
+    <br>
+    <p><strong>Minimum Deposit:</strong><br>₹100 (varies by payment channel)</p>
+    <br>
+    <p><strong>Minimum Withdrawal:</strong><br>₹110</p>
+    <br>
+    <p><strong>Supported Payments:</strong><br>UPI, PhonePe, Paytm, GPay, Bank Transfer, TRC20</p>
+    <br>
+    <p><strong>Age Requirement:</strong><br>18+ only</p>
+    <br>
+    <p><strong>App Platform:</strong><br>Android APK Download</p>
+    <br>
+    <p><strong>Customer Support:</strong><br>24/7 Available</p>
   </div>
 </section>
 
-  <section class="container" id="how-to-play">
-
-  <div class="section-title">
-    <h2>How to Play on BDG Play Game – Beginner Guide</h2>
-    <p>Follow these basic steps to understand the platform and available games.</p>
-  </div>
-
-  <div class="card">
-
-    <p>
-      Getting started on BDG Play Game is very simple, even if this is your
-      first time using an online gaming platform. Follow these steps to go
-      from registration to playing your first round:
-    </p>
-
-    <br>
-
-    <ol class="list">
-      <li>Complete registration using your mobile number.</li>
-      <li>Log in to your account using your registered credentials.</li>
-      <li>Add money to your game wallet using a supported payment method.</li>
-      <li>Go to the Games section from the main dashboard.</li>
-      <li>Choose an available game such as Win Go, K3, 5D, Aviator, or TRX Hash.</li>
-      <li>Read the rules and payout information for that specific game before participating.</li>
-      <li>Make your selection before the round timer reaches zero, where applicable.</li>
-      <li>Wait for the system to announce the round result.</li>
-    </ol>
-
-    <br>
-
-    <div class="notice">
-      <strong>Play Responsibly:</strong>
-      Start with an amount you can afford to lose and never chase losses.
-      Every game may have different rules, odds, and payout structures.
-      Understand the game before participating and take regular breaks.
-    </div>
-
-  </div>
-
-  </section>
-  
-<section class="container" id="games">
-  <div class="section-title">
-    <h2>Games Available on <span class="gold">BDG Play App</span></h2>
-    <p>From colour prediction to lottery-style games, crash games and mini games — explore the game formats described on the BDG Play platform.</p>
-  </div>
-
-  <div class="grid">
-
-    <div class="card">
-      <img src="/win-go.png" alt="Win Go colour prediction game"
-           style="width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:18px;">
-      <h3>Win Go – Colour Prediction</h3>
-      <p>Win Go is a short-round colour and number prediction game format. Players select an available option before the round ends and wait for the result. Previous results do not guarantee future outcomes.</p>
-    </div>
-
-    <div class="card">
-      <img src="/k3-lottery.png" alt="K3 Lottery game"
-           style="width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:18px;">
-      <h3>K3 Lottery</h3>
-      <p>K3 Lottery is a dice-based number game where three dice determine the result of each round. Players select their prediction before the draw ends. Review the rules and payout information before participating.</p>
-    </div>
-
-    <div class="card">
-      <img src="/5d-lottery.png" alt="5D Lottery game"
-           style="width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:18px;">
-      <h3>5D Lottery</h3>
-      <p>5D Lottery uses five-number combinations for each round, providing different number-based prediction options. Results are chance-based, and no prediction strategy can guarantee a particular outcome.</p>
-    </div>
-
-    <div class="card">
-      <img src="/aviator.jpg" alt="Aviator crash game"
-           style="width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:18px;">
-      <h3>Aviator Game</h3>
-      <p>Aviator is a crash-style game in which a multiplier increases during a round. Players may choose when to cash out before the round ends. Waiting longer also increases the risk of losing the round.</p>
-    </div>
-
-    <div class="card">
-      <img src="/trx-hash-win.png" alt="TRX Hash Win game"
-           style="width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:18px;">
-      <h3>TRX Hash Win</h3>
-      <p>TRX Hash Win is described as a hash-based prediction game. Results are associated with transaction-hash data. Check the current platform information to understand exactly how results are generated.</p>
-    </div>
-
-    <div class="card">
-      <img src="/mini-games.png" alt="BDG Play mini games"
-           style="width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:18px;">
-      <h3>Mini Games &amp; Slots</h3>
-      <p>BDG Play may also feature additional casual mini games and slot-style games. Availability, rules and eligibility can change, so always check the current platform information.</p>
-    </div>
-
-  </div>
-
-  <div class="notice" style="margin-top:25px;">
-    <b>Responsible Gaming:</b> Real-money gaming involves financial risk. Only participate where legally permitted, set a budget, never chase losses, and remember that no game or strategy can guarantee winnings.
-  </div>
-</section>
-<section class="container" id="features">
-
-  <div class="section-title">
-    <h2>Key Features of the BDG Play Lottery</h2>
-  </div>
-
-  <div class="card">
-
-    <p>
-      One of the biggest reasons people prefer BDG Play Lottery is how easy
-      the entire experience is — from registration to depositing, playing,
-      and withdrawing. Every step is designed with regular Indian mobile
-      users in mind, so there is no confusing technical setup or complicated
-      process to follow.
-    </p>
-
-    <br>
-
-    <p>
-      The platform supports payment options that most people in India already
-      use daily. You can add money through UPI apps, complete transfers via
-      internet banking, or use supported cryptocurrency options like USDT
-      (TRC20). Deposits are typically processed in seconds so you can start
-      playing almost immediately after adding funds to your wallet.
-    </p>
-
-    <br>
-
-    <p>
-      Security is handled carefully on the BDG Play App. Encrypted connections
-      protect all communication between your device and the platform servers.
-      Secure payment gateways handle all financial transactions so your money
-      and account details are kept safe.
-    </p>
-
-    <br>
-
-    <p>
-      Bonus programs on our game cover multiple categories — new users get a
-      welcome bonus after registration, active players receive daily login
-      rewards, and users who refer friends can earn ongoing referral
-      commissions. Bonus terms may change over time, so always check the latest
-      offers inside the platform.
-    </p>
-
-    <br>
-
-    <h3>Supported Payment Methods</h3>
-
-    <ul class="list">
-      <li>UPI (GPay, PhonePe, Paytm)</li>
-      <li>Net Banking / Bank Transfer</li>
-      <li>Digital Wallets</li>
-      <li>Crypto (USDT / TRC20)</li>
-    </ul>
-
-  </div>
-
-</section>
 
 <section class="container" id="register">
 
@@ -1272,8 +603,8 @@ footer a:hover{
       </li>
 
       <li>
-        Click the <strong>Register</strong> or
-        <strong>Sign Up</strong> button.
+        Click the <strong><a href="#register">Register</a></strong> or
+        <strong><a href="#register">Sign Up</a></strong> button.
       </li>
 
       <li>Enter your valid mobile number.</li>
@@ -1300,6 +631,7 @@ footer a:hover{
   </div>
 </section>
 
+
 <section class="container" id="deposit">
 
   <div class="section-title">
@@ -1318,7 +650,7 @@ footer a:hover{
 
     <h3>Step 1 – Login</h3>
     <p>
-      Complete your BDG Play Login using your registered mobile number and password.
+      Complete your <a href="#login">BDG Play Login</a> using your registered mobile number and password.
     </p>
 
     <br>
@@ -1376,6 +708,7 @@ footer a:hover{
 
 </section>
 
+
 <section class="container" id="withdraw">
 
   <div class="section-title">
@@ -1395,7 +728,7 @@ footer a:hover{
 
     <h3>Step 1 – Login</h3>
     <p>
-      Complete your BDG Play Login and open your account dashboard.
+      Complete your <a href="#login">BDG Play Login</a> and open your account dashboard.
     </p>
 
     <br>
@@ -1493,88 +826,6 @@ footer a:hover{
 
 </section>
 
-<section class="container" id="bonuses">
-
-  <div class="section-title">
-    <h2>Bonuses and Reward Programs</h2>
-  </div>
-
-  <div class="grid">
-
-    <div class="card dark">
-      <h3>1. Welcome Bonus for New Users</h3>
-      <p>
-        Every new user who completes the Register process and makes their first
-        deposit can qualify for a welcome bonus. The bonus amount depends on
-        your first deposit amount and any active promotional offer running at
-        the time of your registration.
-      </p>
-    </div>
-
-    <div class="card dark">
-      <h3>2. First Recharge Reward Event</h3>
-      <p>
-        When you make your very first deposit on your game, you can receive a
-        bonus ranging from 10% to 200% depending on the current promotional
-        event. This extra amount is added directly to your game wallet, giving
-        you more to play with right from the beginning.
-      </p>
-    </div>
-
-    <div class="card dark">
-      <h3>3. Daily Login Reward</h3>
-      <p>
-        BDG Play rewards consistency. Simply signing into your account every
-        day gives you access to daily bonus coins or real money rewards. The
-        longer your daily login streak, the better the rewards can become — a
-        simple habit that adds up over time.
-      </p>
-    </div>
-
-    <div class="card dark">
-      <h3>4. Referral Commission Program</h3>
-      <p>
-        You can earn extra income by sharing your referral code with friends
-        and family. When people register using your code and start playing,
-        you earn a commission from their activity. There is no limit to how
-        many people you can refer — the more active referrals you have, the
-        more you earn.
-      </p>
-    </div>
-
-    <div class="card dark">
-      <h3>5. Real-Time Rebate Cashback</h3>
-      <p>
-        Our platform offers a real-time rebate where you get back a small
-        percentage of your total bet amount, regardless of the round outcome.
-        This cashback feature helps stretch your wallet further and gives you
-        more gaming time without requiring extra deposits.
-      </p>
-    </div>
-
-    <div class="card dark">
-      <h3>6. Win Streak Reward Event</h3>
-      <p>
-        Consecutive wins in the Win Go colour prediction game unlock special
-        Win Streak Rewards. These bonuses are split into different tiers based
-        on your single bet amount, and can be claimed directly from your BDG
-        Play account self-service center.
-      </p>
-    </div>
-
-    <div class="card dark">
-      <h3>7. VIP Level Bonuses</h3>
-      <p>
-        Our Game has a tiered VIP system that rewards loyal and active players.
-        Your VIP level increases based on total deposits and gameplay activity.
-        Higher VIP levels unlock better withdrawal limits, exclusive bonuses,
-        priority support, and platform-specific perks.
-      </p>
-    </div>
-
-  </div>
-
-</section>
 
 <section class="container" id="guide">
 
@@ -1642,51 +893,165 @@ footer a:hover{
 
 </section>
 
-<section class="container">
+
+<section class="container" id="bonuses">
+
   <div class="section-title">
-    <h2>Colour Prediction – How It Actually Works</h2>
+    <h2>Bonuses and Reward Programs</h2>
   </div>
 
+  <div class="grid">
+
+    <div class="card dark">
+      <h3>1. Welcome Bonus for New Users</h3>
+      <p>
+        Every new user who completes the <a href="#register">Register</a> process and makes their first
+        deposit can qualify for a welcome bonus. The bonus amount depends on
+        your first deposit amount and any active promotional offer running at
+        the time of your registration.
+      </p>
+    </div>
+
+    <div class="card dark">
+      <h3>2. First Recharge Reward Event</h3>
+      <p>
+        When you make your very first deposit on your game, you can receive a
+        bonus ranging from 10% to 200% depending on the current promotional
+        event. This extra amount is added directly to your game wallet, giving
+        you more to play with right from the beginning.
+      </p>
+    </div>
+
+    <div class="card dark">
+      <h3>3. Daily Login Reward</h3>
+      <p>
+        BDG Play rewards consistency. Simply signing into your account every
+        day gives you access to daily bonus coins or real money rewards. The
+        longer your daily login streak, the better the rewards can become — a
+        simple habit that adds up over time.
+      </p>
+    </div>
+
+    <div class="card dark">
+      <h3>4. Referral Commission Program</h3>
+      <p>
+        You can earn extra income by sharing your referral code with friends
+        and family. When people <a href="#register">register</a> using your code and start playing,
+        you earn a commission from their activity. There is no limit to how
+        many people you can refer — the more active referrals you have, the
+        more you earn.
+      </p>
+    </div>
+
+    <div class="card dark">
+      <h3>5. Real-Time Rebate Cashback</h3>
+      <p>
+        Our platform offers a real-time rebate where you get back a small
+        percentage of your total bet amount, regardless of the round outcome.
+        This cashback feature helps stretch your wallet further and gives you
+        more gaming time without requiring extra deposits.
+      </p>
+    </div>
+
+    <div class="card dark">
+      <h3>6. Win Streak Reward Event</h3>
+      <p>
+        Consecutive wins in the Win Go colour prediction game unlock special
+        Win Streak Rewards. These bonuses are split into different tiers based
+        on your single bet amount, and can be claimed directly from your BDG
+        Play account self-service center.
+      </p>
+    </div>
+
+    <div class="card dark">
+      <h3>7. VIP Level Bonuses</h3>
+      <p>
+        Our Game has a tiered VIP system that rewards loyal and active players.
+        Your VIP level increases based on total deposits and gameplay activity.
+        Higher VIP levels unlock better withdrawal limits, exclusive bonuses,
+        priority support, and platform-specific perks.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="container" id="games">
+  <div class="section-title">
+    <h2>Games Available on <span class="gold">BDG Play App</span></h2>
+    <p>From colour prediction to lottery-style games, crash games and mini games — explore the game formats described on the BDG Play platform.</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="/win-go.png" alt="Win Go colour prediction game"
+           style="width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:18px;">
+      <h3>Win Go – Colour Prediction</h3>
+      <p>Win Go is a short-round colour and number prediction game format. Players select an available option before the round ends and wait for the result. Previous results do not guarantee future outcomes.</p>
+    </div>
+
+    <div class="card">
+      <img src="/k3-lottery.png" alt="K3 Lottery game"
+           style="width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:18px;">
+      <h3>K3 Lottery</h3>
+      <p>K3 Lottery is a dice-based number game where three dice determine the result of each round. Players select their prediction before the draw ends. Review the rules and payout information before participating.</p>
+    </div>
+
+    <div class="card">
+      <img src="/5d-lottery.png" alt="5D Lottery game"
+           style="width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:18px;">
+      <h3>5D Lottery</h3>
+      <p>5D Lottery uses five-number combinations for each round, providing different number-based prediction options. Results are chance-based, and no prediction strategy can guarantee a particular outcome.</p>
+    </div>
+
+    <div class="card">
+      <img src="/aviator.jpg" alt="Aviator crash game"
+           style="width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:18px;">
+      <h3>Aviator Game</h3>
+      <p>Aviator is a crash-style game in which a multiplier increases during a round. Players may choose when to cash out before the round ends. Waiting longer also increases the risk of losing the round.</p>
+    </div>
+
+    <div class="card">
+      <img src="/trx-hash-win.png" alt="TRX Hash Win game"
+           style="width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:18px;">
+      <h3>TRX Hash Win</h3>
+      <p>TRX Hash Win is described as a hash-based prediction game. Results are associated with transaction-hash data. Check the current platform information to understand exactly how results are generated.</p>
+    </div>
+
+    <div class="card">
+      <img src="/mini-games.png" alt="BDG Play mini games"
+           style="width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:18px;">
+      <h3>Mini Games &amp; Slots</h3>
+      <p>BDG Play may also feature additional casual mini games and slot-style games. Availability, rules and eligibility can change, so always check the current platform information.</p>
+    </div>
+
+  </div>
+
+  <div class="notice" style="margin-top:25px;">
+    <b>Responsible Gaming:</b> Real-money gaming involves financial risk. Only participate where legally permitted, set a budget, never chase losses, and remember that no game or strategy can guarantee winnings.
+  </div>
+</section>
+
+<section class="container" id="login">
+  <div class="section-title">
+    <h2>BDG Play Login – Account Access Guide</h2>
+    <p>General information for users accessing an existing BDG Play account.</p>
+  </div>
   <div class="card">
-
-    <p>
-      The colour prediction feature is the most talked-about aspect of the platform.
-      Many players try to study past results, spot patterns, or follow tips and
-      strategies shared online to predict the next round outcome before it happens.
-    </p>
-
+    <p>To access an existing account, use the platform's verified login page and enter the credentials associated with your account. Check that the website address is correct before entering any personal information.</p>
     <br>
-
-    <p>
-      It is important to understand clearly: every round result on BDG Play Win Go
-      is generated by an automated system. Each round is completely independent
-      from the previous one. No external pattern-tracking or prediction strategy
-      can reliably tell you what the next outcome will be. This is simply how the
-      system works by design.
-    </p>
-
+    <ol class="list">
+      <li>Open the verified BDG Play website.</li>
+      <li>Select the <strong>Login</strong> option.</li>
+      <li>Enter your registered mobile number and password.</li>
+      <li>Complete any verification step requested by the platform.</li>
+      <li>If you cannot access your account, use the platform's official support channel.</li>
+    </ol>
     <br>
-
-    <p>
-      Colour prediction games are entertainment games based on chance. Players
-      should treat them as a form of casual gaming rather than a guaranteed method
-      to earn money. Always set a fixed budget before playing and never risk money
-      that you cannot afford to lose comfortably.
-    </p>
-
-    <br>
-
-    <h3>Platform Transparency Statement</h3>
-
-    <p>
-      All Win Go colour prediction results on BDG Play are produced by an
-      automated, system-generated process that runs independently in each round.
-      No prediction technique, colour chart, or third-party strategy tool can
-      consistently predict outcomes with accuracy. Players who approach this as
-      leisure entertainment — with a set budget and realistic expectations — tend
-      to have a far more enjoyable and controlled gaming experience on the platform.
-    </p>
-
+    <div class="notice"><strong>Security reminder:</strong> Never share your password or OTP with another person, and avoid entering account credentials on unknown or unverified websites.</div>
   </div>
 </section>
 
@@ -1708,7 +1073,7 @@ footer a:hover{
 
     <ul class="list">
       <li>Official Website with full platform information publicly available</li>
-      <li>Clear and working Register and login process</li>
+      <li>Clear and working <a href="#register">Register</a> and login process</li>
       <li>Multiple verified Indian payment methods available for deposits and withdrawals</li>
       <li>Transparent terms of service, privacy policy, and responsible gaming section</li>
       <li>Active user community with many players reporting successful withdrawals</li>
@@ -1838,7 +1203,7 @@ footer a:hover{
 
     <h3>Information We Collect</h3>
     <p>
-      When you register on BDG Play, information such as your mobile number
+      When you <a href="#register">register</a> on BDG Play, information such as your mobile number
       and account credentials may be collected to create and manage your
       account. If you contact us by email or through another support channel,
       we may receive information such as your name and message content so we
@@ -1949,7 +1314,7 @@ footer a:hover{
 
 <section class="cta">
   <h2>Ready to Start Playing on BDG Play? 🎯</h2>
-  <p>Join lakhs of players across India enjoying BDG Play every single day. Register in minutes and claim your welcome bonus today!</p>
+  <p>Join lakhs of players across India enjoying BDG Play every single day. <a href="#register">Register</a> in minutes and claim your welcome bonus today!</p>
   <a class="btn" href="#register">Create Free Account →</a>
 </section>
 <section class="container" id="responsible">
